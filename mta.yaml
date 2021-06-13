@@ -14,6 +14,7 @@ modules:
           srv-url: '${default-url}'
     build-parameters:
       ignore: ["*default-env.json*", "./db/*.env*", "/node_modules", "./db/node_modules", "./app"]
+#      ignore: ["/node_modules", "/db/node_modules"]      
   - name: ShopA2-db-deployer
     type: hdb
     path: db
@@ -22,7 +23,8 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
     build-parameters:
-      ignore: ["default-env.json", ".env", "*node_modules*"]
+     ignore: ["default-env.json", ".env", "*node_modules*"]
+#     ignore: ["*node_modules*"]
   - name: app
     type: approuter.nodejs
     path: app
