@@ -12,8 +12,8 @@ modules:
       - name: srv-api
         properties:
           srv-url: '${default-url}'
-    build-parameters:
-      ignore: ["*default-env.json*", "./db/*.env*", "/node_modules", "./db/node_modules", "./app"]
+#    build-parameters:
+#      ignore: ["*default-env.json*", "./db/*.env*", "/node_modules", "./db/node_modules", "./app"]
 #      ignore: ["/node_modules", "/db/node_modules"]      
   - name: ShopA2-db-deployer
     type: hdb
