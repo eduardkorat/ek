@@ -29,7 +29,8 @@ modules:
     type: approuter.nodejs
     path: app
     requires:
- #     - name: ShopA2_html_repo_runtime
+      - name: ShopA2_html_repo_runtime
+#fromto 
       - name: srv-api
         group: destinations
         properties:
@@ -39,13 +40,16 @@ modules:
     parameters:
       disk-quota: 256M
       memory: 256M
-#  - name: ShopA2_ui_deployer
-#    type: com.sap.application.content
-#    path: .
-#    requires:
-#      - name: ShopA2_html_repo_host
-#        parameters:
-#          content-target: true
+#from     
+  - name: ShopA2_ui_deployer
+    type: com.sap.application.content
+    path: .
+    requires:
+      - name: ShopA2_html_repo_host
+        parameters:
+          content-target: true
+#to         
+
 resources:
   - name: ShopA2-db
     type: com.sap.xs.hdi-container
@@ -54,16 +58,21 @@ resources:
       service-plan: hdi-shared
     properties:
       hdi-service-name: '${service-name}'
- # - name: ShopA2_html_repo_runtime
- #   type: org.cloudfoundry.managed-service
- #   parameters:
- #     service: html5-apps-repo
- #     service-plan: app-runtime
- # - name: ShopA2_html_repo_host
- #   type: org.cloudfoundry.managed-service
- #   parameters:
- #     service: html5-apps-repo
- #     service-plan: app-host
+#from     
+  - name: ShopA2_html_repo_runtime
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime
+  - name: ShopA2_html_repo_host
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-host
+      config:
+        sizeLimit: 256
+ #to       
+ 
 parameters:
   enable-parallel-deployments: true
 build-parameters:
