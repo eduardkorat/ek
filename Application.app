@@ -1,12 +1,12 @@
 {
-	"_Name": "ShopA",
-	"Version": "/ShopA/Globals/AppDefinition_Version.global",
-	"MainPage": "/ShopA/Pages/Main.page",
+	"Localization": "/ShopA/i18n/i18n.properties",
+	"MainPage": "/ShopA/Pages/StoreItemList.page",
+	"OnDidUpdate": "/ShopA/Actions/Service/InitializeOffline.action",
 	"OnLaunch": [
 		"/ShopA/Actions/Service/InitializeOffline.action"
 	],
 	"OnWillUpdate": "/ShopA/Rules/OnWillUpdate.js",
-	"OnDidUpdate": "/ShopA/Actions/Service/InitializeOffline.action",
 	"Styles": "/ShopA/Styles/Styles.less",
-	"Localization": "/ShopA/i18n/i18n.properties"
+	"Version": "/ShopA/Globals/AppDefinition_Version.global",
+	"_Name": "ShopA"
 }
