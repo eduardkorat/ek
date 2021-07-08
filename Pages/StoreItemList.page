@@ -1,5 +1,16 @@
 {
-	"Caption": "Shopping Item Favorites",
+	"ActionBar": {
+		"Items": [
+			{
+				"IsIconCircular": false,
+				"OnPress": "/ShopA/Actions/ToCreateStoreItem.action",
+				"Position": "left",
+				"Text": "Create",
+				"Visible": true
+			}
+		]
+	},
+	"Caption": "Store Items List",
 	"Controls": [
 		{
 			"Sections": [
@@ -19,12 +30,11 @@
 							],
 							"PerformFirstActionWithFullSwipe": true
 						},
-						"Description": "{QUANTITY}",
 						"DetailImageIsCircular": false,
+						"OnPress": "/ShopA/Actions/StoreItemDetail.action",
 						"PreserveIconStackSpacing": true,
-						"ProgressIndicator": "inProgress",
 						"Selected": false,
-						"StatusText": "{PRICE}",
+						"StatusText": "{SHELFQTY}",
 						"Subhead": "{PRODUCTID}",
 						"Title": "{STOREID}"
 					},
@@ -34,11 +44,11 @@
 						"Mode": "None"
 					},
 					"Target": {
-						"EntitySet": "ShoppingItem",
+						"EntitySet": "StoreItem",
 						"Service": "/ShopA/Services/ShopA.service"
 					},
 					"Visible": true,
-					"_Name": "SectionObjectTable0",
+					"_Name": "StoreItem",
 					"_Type": "Section.Type.ObjectTable"
 				}
 			],
@@ -68,6 +78,6 @@
 			}
 		]
 	},
-	"_Name": "Shopping_Items",
+	"_Name": "Store_Items",
 	"_Type": "Page"
 }
