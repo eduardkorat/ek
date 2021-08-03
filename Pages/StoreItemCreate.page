@@ -11,7 +11,7 @@
 			}
 		]
 	},
-	"Caption": "Store Item",
+	"Caption": "Create Store Item",
 	"Controls": [
 		{
 			"Sections": [
@@ -49,6 +49,6 @@
 			"_Type": "Control.Type.FormCellContainer"
 		}
 	],
-	"_Name": "StoreItemDetail",
+	"_Name": "StoreItemCreate",
 	"_Type": "Page"
 }

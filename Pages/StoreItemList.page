@@ -38,6 +38,9 @@
 						"Subhead": "{PRODUCTID}",
 						"Title": "{STOREID}"
 					},
+					"Search": {
+						"Enabled": true
+					},
 					"Selection": {
 						"ExitOnLastDeselect": true,
 						"LongPressToEnable": "None",
