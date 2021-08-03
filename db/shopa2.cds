@@ -19,6 +19,7 @@ entity StoreItem {
 };
 
 entity ShoppingItem {
+    key USERID    : String(30);    
     key STOREID   : String(30);
     key PRODUCTID : String(30);
         QUANTITY  : Double;
